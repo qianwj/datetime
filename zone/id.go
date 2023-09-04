@@ -1,5 +1,7 @@
 package zone
 
+import "time"
+
 var shortIDs = map[string]*Id{}
 
 var (
@@ -70,6 +72,10 @@ func init() {
 type Id struct {
 	short string
 	val   string
+}
+
+func (i *Id) Location() (*time.Location, error) {
+	return time.LoadLocation(i.val)
 }
 
 func DefaultId() *Id {
