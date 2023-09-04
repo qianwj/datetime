@@ -33,7 +33,7 @@ var (
 	PST           = &Id{short: "PST", val: "America/Los_Angeles"}
 	SST           = &Id{short: "SST", val: "Pacific/Guadalcanal"}
 	VST           = &Id{short: "VST", val: "Asia/Ho_Chi_Minh"}
-	defaultZoneId = &Id{short: "", val: ""}
+	defaultZoneId = &Id{short: "Local", val: ""}
 )
 
 func init() {
